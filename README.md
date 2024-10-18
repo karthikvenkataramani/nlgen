@@ -107,6 +107,8 @@ To build and run this project, you will need API keys from two platforms:
 With the **Personalized Newsletter Generator**, users can quickly get curated and summarized news based on their interests. By combining article 
 fetching with AI-powered summarization, this project provides an efficient way to stay informed.
 
+<img width="1345" alt="Screenshot 2024-10-19 at 1 10 18 AM" src="https://github.com/user-attachments/assets/1d123054-eb9a-49c1-85c0-6074d5f250bd">
+
 
 
 
