@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Newsletter Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #bb86fc;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            background-color: #2c2c2c;
+            border: none;
+            border-radius: 4px;
+            color: #e0e0e0;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #03dac6;
+            color: #000000;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #018786;
+        }
+        #newsletter {
+            white-space: pre-wrap;
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        h2 {
+            color: #cf6679;
+            margin-top: 30px;
+        }
+        a {
+            color: #03dac6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Personalized Newsletter Generator</h1>
+        <form method="POST">
+            <input type="text" name="interests" placeholder="Enter your interests (e.g., technology, sports, cooking)" required>
+            <input type="submit" value="Generate Newsletter">
+        </form>
+        {% if newsletter %}
+            <h2>Your Personalized Newsletter:</h2>
+            <div id="newsletter">
+                {{ newsletter|safe }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
